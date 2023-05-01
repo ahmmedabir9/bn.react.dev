@@ -1,10 +1,10 @@
 ---
-title: Managing State
+title: স্টেট ম্যানেজমেন্ট
 ---
 
 <Intro>
 
-As your application grows, it helps to be more intentional about how your state is organized and how the data flows between your components. Redundant or duplicate state is a common source of bugs. In this chapter, you'll learn how to structure your state well, how to keep your state update logic maintainable, and how to share state between distant components.
+আমরা আমাদের এপ্লিকেশনে কিভাবে স্টেট গুলো কে সাজাবো এবং এপ্লিকেশনের ডেটা কিভাবে এক কম্পনেন্ট থেকে অন্য কম্পনেন্টে পাঠাবো, এই বিষয়গুলোর প্রয়োজনীয়তা এপ্লিকেশন বড় হওয়ার সাথে সাথে বৃদ্ধি পায়। যেখানে অপ্রয়োজনীয় অথবা একই নামের একাধিক স্টেট এপ্লিকেশনের একটা সাধারণ বাগ। এই চ্যাপ্টার আমরা শিখবো কিভাবে সঠিকভাবে স্টেট সাজাতে হয়, কিভাবে স্টেট আপডেট এর লজিক লেখা যায় যেন তা পরবর্তীতে যেকোনো অবস্থায় ব্যবহার করা সহজ হয়, এবং কিভাবে এক কম্পনেন্ট এর স্টেট অন্য কোনো দূরবর্তী কম্পনেন্টে পাঠানো যায়।
 
 </Intro>
 
