@@ -505,7 +505,7 @@ State এর জীবনকাল এবং কিভাবে এটি নি
 
 ## Extracting state logic into a reducer {/*extracting-state-logic-into-a-reducer*/}
 
-Components with many state updates spread across many event handlers can get overwhelming. For these cases, you can consolidate all the state update logic outside your component in a single function, called "reducer". Your event handlers become concise because they only specify the user "actions". At the bottom of the file, the reducer function specifies how the state should update in response to each action!
+যেসব কম্পোনেন্টের অনেক স্টেট আপডেট থাকে এবং সেগুলি বিভিন্ন ইভেন্ট হ্যান্ডলারে ছড়িয়ে থাকে, সেগুলি সামলানো কঠিন হয়ে যেতে পারে। এই ধরণের ক্ষেত্রে, আপনি কম্পোনেন্টের বাইরে একটি ফাংশনে সমস্ত স্টেট আপডেটের লজিক একত্রিত করতে পারেন, যেটিকে "রিডিউসার" বলা হয়। আপনার ইভেন্ট হ্যান্ডলারগুলি সংক্ষিপ্ত হয়ে যায় কারণ তারা কেবল ব্যবহারকারীর "অ্যাকশন"গুলি নির্দিষ্ট করে। ফাইলের নিচের দিকে, রিডিউসার ফাংশনটি নির্দিষ্ট করে কিভাবে প্রতিটি অ্যাকশনের প্রতিক্রিয়ায় স্টেট আপডেট হবে!
 
 <Sandpack>
 
@@ -544,7 +544,7 @@ export default function TaskApp() {
 
   return (
     <>
-      <h1>Prague itinerary</h1>
+      <h1>প্রাগ ভ্রমণসূচি</h1>
       <AddTask
         onAddTask={handleAddTask}
       />
@@ -586,9 +586,9 @@ function tasksReducer(tasks, action) {
 
 let nextId = 3;
 const initialTasks = [
-  { id: 0, text: 'Visit Kafka Museum', done: true },
-  { id: 1, text: 'Watch a puppet show', done: false },
-  { id: 2, text: 'Lennon Wall pic', done: false }
+  { id: 0, text: 'কাফকা মিউজিয়াম পরিদর্শন', done: true },
+  { id: 1, text: 'পাপেট শো দেখা', done: false },
+  { id: 2, text: 'লেনন ওয়ালে ছবি তোলা', done: false }
 ];
 ```
 
@@ -600,14 +600,14 @@ export default function AddTask({ onAddTask }) {
   return (
     <>
       <input
-        placeholder="Add task"
+        placeholder="টাস্ক যোগ করুন"
         value={text}
         onChange={e => setText(e.target.value)}
       />
       <button onClick={() => {
         setText('');
         onAddTask(text);
-      }}>Add</button>
+      }}>যোগ করুন</button>
     </>
   )
 }
@@ -651,7 +651,7 @@ function Task({ task, onChange, onDelete }) {
             });
           }} />
         <button onClick={() => setIsEditing(false)}>
-          Save
+          সংরক্ষণ করুন
         </button>
       </>
     );
@@ -660,7 +660,7 @@ function Task({ task, onChange, onDelete }) {
       <>
         {task.text}
         <button onClick={() => setIsEditing(true)}>
-          Edit
+          সংশোধন করুন
         </button>
       </>
     );
@@ -679,7 +679,7 @@ function Task({ task, onChange, onDelete }) {
       />
       {taskContent}
       <button onClick={() => onDelete(task.id)}>
-        Delete
+        মুছুন
       </button>
     </label>
   );
@@ -696,7 +696,7 @@ ul, li { margin: 0; padding: 0; }
 
 <LearnMore path="/learn/extracting-state-logic-into-a-reducer">
 
-Read **[Extracting State Logic into a Reducer](/learn/extracting-state-logic-into-a-reducer)** to learn how to consolidate logic in the reducer function.
+রিডিউসার ফাংশনে লজিক সংকলন করা শিখতে **[রিডিউসারে স্টেট লজিক এক্সট্র্যাক্ট করা](/learn/extracting-state-logic-into-a-reducer)** পেইজটি পড়ুন।
 
 </LearnMore>
 
